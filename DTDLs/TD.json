@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    "https://www.w3.org/2019/wot/td/v1.1"
+  ],
+  "id": "urn:uuid:e30d1234-5678-90ab-cdef-1234567890de",
+  "title": "PumpDevice",
+  "description": "Digital twin of the XYZ Pump",
+  "properties": {
+    "ManufacturerName": {
+      "type": "string",
+      "description": "Manufacturer of the pump",
+      "readOnly": true,
+      "value": "Global Pump Co."
+    },
+    "SerialNumber": {
+      "type": "string",
+      "description": "Serial number of the pump",
+      "readOnly": true,
+      "value": "456789-A-2025"
+    },
+    "YearOfConstruction": {
+      "type": "integer",
+      "description": "Year the pump was constructed",
+      "readOnly": true,
+      "value": 2025
+    },
+    "MotorSpeed": {
+      "type": "integer",
+      "description": "Current motor speed of the pump",
+      "unit": "rpm",
+      "value": 1500
+    },
+    "VibrationLevel": {
+      "type": "number",
+      "description": "Vibration level of the pump",
+      "unit": "mm/s",
+      "value": 4.2
+    }
+  },
+  "actions": {
+    "StartPump": {
+      "description": "Remotely starts the pump motor.",
+      "input": {},
+      "output": {
+        "status": {
+          "type": "string",
+          "description": "Status of the pump after start",
+          "enum": ["success", "failure"]
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://company.com/assets/4567"
+    }
+  ]
+}

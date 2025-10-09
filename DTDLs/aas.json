@@ -1,0 +1,61 @@
+{
+  "assetAdministrationShell": {
+    "id": "urn:uuid:e30d1234-5678-90ab-cdef-1234567890de",
+    "asset": {
+      "kind": "Instance",
+      "id": "ManufacturerID: XYZ-Pump-4567",
+      "globalAssetId": "https://company.com/assets/4567"
+    },
+    "submodels": [
+      {
+        "idShort": "DigitalNameplate",
+        "identification": "urn:uuid:d10c8765-4321-fedc-ba98-7654321098fe",
+        "submodelElements": [
+          {
+            "idShort": "ManufacturerName",
+            "modelType": "Property",
+            "valueType": "string",
+            "value": "Global Pump Co."
+          },
+          {
+            "idShort": "SerialNumber",
+            "modelType": "Property",
+            "valueType": "string",
+            "value": "456789-A-2025"
+          },
+          {
+            "idShort": "YearOfConstruction",
+            "modelType": "Property",
+            "valueType": "integer",
+            "value": "2025"
+          }
+        ]
+      },
+      {
+        "idShort": "OperationalData",
+        "identification": "urn:uuid:f20b3456-7890-12ab-34cd-567890ab12cd",
+        "submodelElements": [
+          {
+            "idShort": "MotorSpeed",
+            "modelType": "Property",
+            "valueType": "integer",
+            "value": "1500",
+            "unit": "rpm"
+          },
+          {
+            "idShort": "VibrationLevel",
+            "modelType": "Property",
+            "valueType": "double",
+            "value": "4.2",
+            "unit": "mm/s"
+          },
+          {
+            "idShort": "StartPump",
+            "modelType": "Operation",
+            "description": "Remotely starts the pump motor."
+          }
+        ]
+      }
+    ]
+  }
+}
